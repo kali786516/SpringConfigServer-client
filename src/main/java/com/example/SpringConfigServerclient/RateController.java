@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class RateController {
 
+    /*
     @Value("${rate}")
     String rate;
 
@@ -35,6 +36,23 @@ public class RateController {
         //name of view
         return "rateview";
     }
+    */
+
+    @RequestMapping(value = "/index",method = RequestMethod.GET)
+    public String getIndex() {
+        return "index";
+    }
+
+    @RequestMapping(value = "/new",method = RequestMethod.GET)
+    public String newAccount() {
+        return "newAccount";
+    }
+
+    @RequestMapping(value = "/showAccount",method = RequestMethod.GET)
+    public String showAccount() {
+        return "showAccount";
+    }
+
 
 
 }
